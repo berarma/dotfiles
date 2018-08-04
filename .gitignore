@@ -1,0 +1,10 @@
+*~
+*.sw[a-z]
+/*
+/*/
+!/.gitignore
+!/.profile
+!/.bash_profile
+!/.bashrc
+!/.profile.d/
+
