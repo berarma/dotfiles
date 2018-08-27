@@ -109,6 +109,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[[ $- = *i* ]] && source /usr/local/share/liquidprompt/liquidprompt
-
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+for file in $HOME/.bashrc.d/*;
+do
+    source $file;
+done

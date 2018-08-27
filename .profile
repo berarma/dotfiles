@@ -20,8 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-for file in ~/.profile.d/*;
-do
-    source $file;
-done
