@@ -1,1 +1,1 @@
-/home/bernat/.config/nvim/
+.config/nvim

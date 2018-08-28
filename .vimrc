@@ -1,1 +1,1 @@
-/home/bernat/.vim/vimrc
+.vim/vimrc
