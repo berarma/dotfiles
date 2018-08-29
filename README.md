@@ -17,26 +17,37 @@ The idea is taken from:
 
 ## Installation
 
-**WARNING: This instructions will install some software that I find useful. Please, read, fork and modify
+**WARNING: These instructions will install some software that I find useful. Please, read, fork and modify
 the code to your likes before using it.**
 
-Run:
-```wget -O - https://raw.githubusercontent.com/berarma/dotfiles/master/bin/dotfiles_install | bash```
+Using wget:
+
+```
+bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/bin/dotfiles_install)
+```
+
+Using curl:
+
+```
+bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/bin/dotfiles_install)
+```
+
+Now you've downloaded the Git files and some tools, but your configuration files haven't changed yet.
+
+Create the ```config``` alias:
+
+```
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+```
 
 Use the ```config``` command to handle your home directory as a Git work directory.
-You'll want to checkout files or add yours. You can use a branch for local changes.
+You'll want to checkout files or add yours to the repository. You can use a branch for local changes.
 Be careful not to overwrite any configuration files that are important to you.
-
-Install vim-plug:
-
-```
-wget -O .config/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
 
 ## What's included?
 
 At the time:
-- Neovim/vim configurations.
+- Neovim/vim configuration.
 - Liquidprompt configuration.
-- Tmux configurations.
+- Tmux configuration.
 - Shell customizations.

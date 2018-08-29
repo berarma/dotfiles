@@ -109,7 +109,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-for file in $HOME/.bashrc.d/*;
+for file in $HOME/.rc.d/*;
 do
     source $file;
 done

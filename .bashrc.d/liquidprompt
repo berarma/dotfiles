@@ -1,1 +1,0 @@
-[[ $- = *i* ]] && [[ -r /usr/local/share/liquidprompt/liquidprompt ]] && source /usr/local/share/liquidprompt/liquidprompt
