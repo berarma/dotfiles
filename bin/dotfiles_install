@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if [ ! -d $HOME/.myconf ];
+then
+    git clone --bare https://github.com/berarma/dotfiles $HOME/.myconf
+fi
+
+if [ ! -f $HOME/.config/nvim/autoload/plug.vim ];
+then
+    wget -O $HOME/.config/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+if [ ! -d /usr/local/share/liquidprompt ];
+then
+    git clone https://github.com/nojhan/liquidprompt.git /usr/local/share/liquidprompt
+fi
+
