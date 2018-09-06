@@ -1,2 +1,2 @@
 [[ $- = *i* ]] && { [[ -r $HOME/liquidprompt/liquidprompt ]] && source $HOME/liquidprompt/liquidprompt \
-    || [[ -r /usr/local/share/liquidprompt/liquidprompt ]] && source /usr/local/share/liquidprompt/liquidprompt; }
+    || { [[ -r /usr/local/share/liquidprompt/liquidprompt ]] && source /usr/local/share/liquidprompt/liquidprompt; } }
