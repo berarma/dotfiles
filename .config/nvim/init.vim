@@ -14,7 +14,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'groenewege/vim-less'
 Plug 'honza/vim-snippets'
 Plug 'jparise/vim-graphql'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'branch': 'php5', 'do': 'composer install' }
+if v:version >= 800
+    Plug 'lvht/phpcd.vim', { 'for': 'php', 'branch': 'php5', 'do': 'composer install' }
+endif
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mtth/scratch.vim'
