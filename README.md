@@ -23,13 +23,13 @@ the code to your likes before using it.**
 Using wget:
 
 ```
-bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/bin/dotfiles_install)
+bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/dotfiles_install)
 ```
 
 Using curl:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/bin/dotfiles_install)
+bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/dotfiles_install)
 ```
 
 Now you've downloaded the Git files and some tools, but your configuration files haven't changed yet.
