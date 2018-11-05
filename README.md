@@ -17,37 +17,25 @@ The idea is taken from:
 
 ## Installation
 
-**WARNING: These instructions will install some software that I find useful. Please, read, fork and modify
-the code to your likes before using it.**
+**WARNING: This repository is for personal use only. Don't install it without
+first understanding what it will do. Use at your own risk.**
 
 Using wget:
 
 ```
-bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/dotfiles_install)
+bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
 ```
 
 Using curl:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/dotfiles_install)
+bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
 ```
 
-Now you've downloaded the Git files and some tools, but your configuration files haven't changed yet.
+The Git files and some tools have been downloaded, but your configuration files
+haven't changed yet.
 
-Create the ```config``` alias:
-
-```
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-```
-
-Use the ```config``` command to handle your home directory as a Git work directory.
-You'll want to checkout files or add yours to the repository. You can use a branch for local changes.
-Be careful not to overwrite any configuration files that are important to you.
-
-## What's included?
-
-At the time:
-- Neovim/vim configuration.
-- Liquidprompt configuration.
-- Tmux configuration.
-- Shell customizations.
+Use the ```config``` command to handle your home directory as a Git working
+directory. You'll want to checkout files or add yours to the repository. You
+can use a branch for local changes. Be careful not to overwrite any
+configuration files that are important to you.
