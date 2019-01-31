@@ -147,7 +147,10 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " ctrlp.vim config
-let g:ctrlp_extensions = ['autoignore']
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l -U --nocolor --hidden -g ""'
+  let g:ctrlp_use_caching = 0
+endif
 
 " indent-guides config
 let g:indent_guides_enable_on_vim_startup = 1
@@ -174,11 +177,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ackhighlight = 1
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
-endif
-
-" ctrlp: faster file reading
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 " Tagbar: don't show variables
