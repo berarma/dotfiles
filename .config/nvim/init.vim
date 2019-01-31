@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'junegunn/vim-plug'
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'Konfekt/FastFold'
 if has('python3')
