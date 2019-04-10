@@ -23,4 +23,5 @@ then
     echo "Liquidprompt installed."
 fi
 
-source ${HOME}/.rc.d/aliases
+which wget >/dev/null && source <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.rc.d/aliases)
+which curl >/dev/null && source <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.rc.d/aliases)
