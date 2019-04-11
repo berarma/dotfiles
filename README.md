@@ -23,13 +23,13 @@ first understanding what it will do. Use at your own risk.**
 Using wget:
 
 ```
-bash <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
+source <(wget -q -O - https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
 ```
 
 Using curl:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
+source <(curl -s https://raw.githubusercontent.com/berarma/dotfiles/master/.local/bin/install_dotfiles)
 ```
 
 The Git files and some tools have been downloaded, but your configuration files
