@@ -6,7 +6,7 @@ then
     echo "Dotfiles repository installed."
 fi
 
-if [ -d ${HOME}/.config/nvim/autoload ];
+if [ ! -d ${HOME}/.config/nvim/autoload ];
 then
     mkdir -p ${HOME}/.config/nvim/autoload
 fi
