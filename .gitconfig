@@ -1,20 +1,22 @@
 [user]
     name = Bernat Arlandis
     email = berarma@hotmail.com
+[credential]
+    helper = cache
+[filter "tabspace"]
 [color]
     ui = true
 [core]
+    pager = less -x3,2
     excludesfile = ~/.cvsignore
 [push]
     default = simple
 [merge]
-
-[mergetool "meld2"]
-    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge $LOCAL $BASE $REMOTE --output $MERGED
-[merge]
     conflictstyle = diff3
 [mergetool "meld"]
     cmd = meld --diff $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $REMOTE $LOCAL -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE
+[mergetool "meld2"]
+    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge $LOCAL $BASE $REMOTE --output $MERGED
 [alias]
     co = checkout
     br = branch
