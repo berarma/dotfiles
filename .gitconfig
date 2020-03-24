@@ -1,0 +1,27 @@
+[user]
+    name = Bernat Arlandis
+    email = berarma@hotmail.com
+[color]
+    ui = true
+[core]
+    excludesfile = ~/.cvsignore
+[push]
+    default = simple
+[merge]
+
+[mergetool "meld2"]
+    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge $LOCAL $BASE $REMOTE --output $MERGED
+[merge]
+    conflictstyle = diff3
+[mergetool "meld"]
+    cmd = meld --diff $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $REMOTE $LOCAL -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    glog = log --graph --decorate --all --pretty=fuller
+    arcpatch = !arc patch $1 && git rebase master && git checkout master && git merge arcpatch-$1 && :
+    slist = stash list --format='%gd %ad %gs'
+[diff]
+    algorithm = patience
