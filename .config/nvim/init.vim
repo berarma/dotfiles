@@ -1,5 +1,8 @@
 call plug#begin()
 Plug 'junegunn/vim-plug'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'Konfekt/FastFold'
 if has('python3')
@@ -35,7 +38,7 @@ if has('python3')
     Plug 'vim-vdebug/vdebug'
 endif
 Plug 'vim-scripts/desert256.vim'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 call plug#end()
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
@@ -163,13 +166,15 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_tab_guides = 0
 
 " ALE config
-let g:ale_sign_column_always = 1
-let g:ale_lint_delay = 500
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_linters = {
-\ 'php': ['php'],
-\}
+"let g:ale_sign_column_always = 1
+"let g:ale_lint_delay = 500
+"let g:ale_lint_on_text_changed = 'normal'
+"let g:ale_lint_on_insert_leave = 1
+"let g:ale_linters = {
+"\ 'php': ['php'],
+"\}
+
+" Generic bindings
 inoremap <C-c> <Esc>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
