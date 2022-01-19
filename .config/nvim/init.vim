@@ -35,6 +35,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-liquid'
 if has('python3')
     Plug 'vim-vdebug/vdebug'
 endif
