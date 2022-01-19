@@ -67,7 +67,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set lazyredraw
-set list listchars=tab:▸·,eol:.,trail:·
+set list listchars=tab:‣·,eol:.,trail:·,nbsp:␣ 
 set noshowmode
 set nostartofline
 set notimeout ttimeoutlen=0
