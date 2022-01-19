@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'junegunn/vim-plug'
+Plug 'habamax/vim-godot'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -168,6 +169,8 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_tab_guides = 0
 
+" Godot
+"let g:godot_executable = '/usr/local/bin/godot'
 
 " Generic bindings
 inoremap <C-c> <Esc>
