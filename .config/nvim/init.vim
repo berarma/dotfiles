@@ -1,4 +1,10 @@
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'tommcdo/vim-exchange'
+Plug 'preservim/vim-wordy'
+Plug 'preservim/vim-lexical'
+Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-pencil'
+Plug 'iamcco/markdown-preview.nvim'
 Plug 'habamax/vim-godot'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -129,6 +135,13 @@ let g:PHP_noArrowMatching = 1
 
 " Don't load NetRW plugin
 let loaded_netrwPlugin = 1
+
+" Plugins for markdown
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType markdown,mkd call lexical#init()
+augroup END
 
 " Airline config
 let g:airline_highlighting_cache = 1
