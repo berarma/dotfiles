@@ -168,19 +168,9 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_tab_guides = 0
 
-" ALE config
-"let g:ale_sign_column_always = 1
-"let g:ale_lint_delay = 500
-"let g:ale_lint_on_text_changed = 'normal'
-"let g:ale_lint_on_insert_leave = 1
-"let g:ale_linters = {
-"\ 'php': ['php'],
-"\}
 
 " Generic bindings
 inoremap <C-c> <Esc>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Ack: highlight search term
 let g:ackhighlight = 1
@@ -224,6 +214,8 @@ if v:version >= 700
     autocmd BufLeave * call AutoSaveWinView()
     autocmd BufEnter * call AutoRestoreWinView()
 endif
+
+"runtime ./coc.vim
 
 " Load .vimrc.local
 if filereadable(glob("~/.vimrc.local")) 
