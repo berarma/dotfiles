@@ -1,5 +1,4 @@
-call plug#begin()
-Plug 'junegunn/vim-plug'
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'habamax/vim-godot'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
