@@ -84,6 +84,7 @@ set tabstop=4
 set undofile
 set visualbell
 set wildmenu
+set termguicolors
 
 " Vim settings
 set t_vb=
