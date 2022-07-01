@@ -1,0 +1,17 @@
+snippet amz
+{% amazon_product asin: $1 name: "$2" %}
+endsnippet
+
+snippet affiliate_products
+{% affiliate_products title: "$1" %}
+	$0
+{% endaffiliate_products %}
+endsnippet
+
+snippet include
+{% include $1 %}
+endsnippet
+
+snippet responsive_image
+{% responsive_image path: $0 caption: "$1" ${2/(".*)|.*/(?1: author\: )/}${2:"author"} ${3/(".*)|.*/(?1: license\: )/}${3:"license"} ${4/(".*)|.*/(?1: original_url\: )/}${4:"original url"} ${5/(".*)|.*/(?1: author_url\: )/}${5:"author url"} %}
+endsnippet
