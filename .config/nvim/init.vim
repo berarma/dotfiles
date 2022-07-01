@@ -137,6 +137,14 @@ let g:PHP_noArrowMatching = 1
 let loaded_netrwPlugin = 1
 
 " Plugins for markdown
+let g:pencil#autoformat_config = {
+            \   'liquid': {
+            \     'black': [
+            \       'yaml*',
+            \       'liquid*',
+            \     ],
+            \   },
+            \}
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
