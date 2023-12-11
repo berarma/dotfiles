@@ -28,3 +28,5 @@
     slist = stash list --format='%gd %ad %gs'
 [diff]
     algorithm = patience
+[pull]
+	ff = only

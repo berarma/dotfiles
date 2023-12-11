@@ -2,26 +2,27 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tommcdo/vim-exchange'
 Plug 'preservim/vim-wordy'
 Plug 'preservim/vim-lexical'
-Plug 'junegunn/limelight.vim'
+"Plug 'junegunn/limelight.vim'
 Plug 'reedes/vim-pencil'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && ./install.sh' }
 Plug 'habamax/vim-godot'
-Plug 'mfussenegger/nvim-dap'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+"Plug 'mfussenegger/nvim-dap'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '2072/PHP-Indenting-for-VIm'
 Plug 'Konfekt/FastFold'
-if has('python3')
-    Plug 'SirVer/ultisnips'
-endif
-Plug 'mileszs/ack.vim'
-Plug 'adoy/vim-php-refactoring-toolbox'
+"if has('python3')
+"    Plug 'SirVer/ultisnips'
+"endif
+"Plug 'mileszs/ack.vim'
+Plug 'wincent/ferret'
+"Plug 'adoy/vim-php-refactoring-toolbox'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/colorizer'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 Plug 'jparise/vim-graphql'
 "if v:version >= 800
 "    Plug 'lvht/phpcd.vim', { 'for': 'php', 'branch': 'php5', 'do': 'composer install' }
@@ -43,9 +44,9 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-liquid'
-if has('python3')
-    Plug 'vim-vdebug/vdebug'
-endif
+"if has('python3')
+"    Plug 'vim-vdebug/vdebug'
+"endif
 Plug 'morhetz/gruvbox'
 "Plug 'w0rp/ale'
 call plug#end()
@@ -178,9 +179,16 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " ctrlp.vim config
+let g:ctrlp_user_command = {
+            \ 'types': {
+            \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f'],
+            \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+            \ },
+            \ 'fallback': 'find %s -type f'
+            \}
+let g:ctrlp_use_caching = 0
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l -U --nocolor --hidden -g ""'
-  let g:ctrlp_use_caching = 0
+    let g:ctrlp_user_command['fallback'] = 'ag %s -l -U --nocolor --hidden -g ""'
 endif
 
 " indent-guides config
@@ -228,6 +236,11 @@ nmap <F8> :TagbarToggle<CR>
 " Colorizer config
 let g:colorizer_auto_filetype='html,css,less'
 
+" Ferret
+let g:FerretMap = 0
+nmap <unique> <Leader>za <Plug>(FerretAck)
+nmap <unique> <Leader>zs <Plug>(FerretAckWord)
+
 "
 " From http://vim.wikia.com/wiki/Avoid_scrolling_when_switch_buffers
 " Save current view settings on a per-window, per-buffer basis.
@@ -255,7 +268,7 @@ if v:version >= 700
     autocmd BufEnter * call AutoRestoreWinView()
 endif
 
-"runtime ./coc.vim
+runtime ./coc.vim
 
 " Load .vimrc.local
 if filereadable(glob("~/.vimrc.local")) 
