@@ -149,7 +149,6 @@ let g:pencil#autoformat_config = {
             \}
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType markdown,mkd call lexical#init()
 augroup END
 
