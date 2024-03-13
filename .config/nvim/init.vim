@@ -240,6 +240,9 @@ let g:FerretMap = 0
 nmap <unique> <Leader>za <Plug>(FerretAck)
 nmap <unique> <Leader>zs <Plug>(FerretAckWord)
 
+" CurtineIncSw
+nnoremap <silent> <Leader>dd :CocCommand clangd.switchSourceHeader<CR>
+
 "
 " From http://vim.wikia.com/wiki/Avoid_scrolling_when_switch_buffers
 " Save current view settings on a per-window, per-buffer basis.
