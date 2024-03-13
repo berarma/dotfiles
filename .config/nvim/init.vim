@@ -243,6 +243,9 @@ nmap <unique> <Leader>zs <Plug>(FerretAckWord)
 " CurtineIncSw
 nnoremap <silent> <Leader>dd :CocCommand clangd.switchSourceHeader<CR>
 
+" Correctly indent C++ lambdas
+set cino=j1,(0,ws,Ws
+
 "
 " From http://vim.wikia.com/wiki/Avoid_scrolling_when_switch_buffers
 " Save current view settings on a per-window, per-buffer basis.
