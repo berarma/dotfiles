@@ -11,5 +11,6 @@
         "reportOptionalMemberAccess": "information"
     },
     "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/17.0.3/clangd_17.0.3/bin/clangd",
-    "inlayHint.enable": true
+    "inlayHint.enable": true,
+    "suggest.noselect": true
 }
